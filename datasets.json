@@ -1,0 +1,58 @@
+{
+  "info": {
+    "description": "Test",
+    "url": "https://test",
+    "version": "0.01",
+    "year": 2019,
+    "contributor": "xxxx",
+    "data_created": "2019/09/10"
+  },
+  "licenses": "",
+  "images": [
+    {
+        "license": 4,
+        "file_name": "gorira.jpg",
+        "coco_url": "http://images.cocodataset.org/val2017/000000397133.jpg",
+        "height": 168,
+        "width": 300,
+        "date_captured": "2013-11-14 17:02:52",
+        "flickr_url": "http://farm7.staticflickr.com/6116/6255196340_da26cf2c9e_z.jpg",
+        "id": 0
+    }],
+  "annotations": [
+    {
+      "segmentation": [
+        [
+          10,
+          8,
+          100,
+          50
+        ]
+      ],
+      "id": 0,
+      "image_id": 0,
+      "category_id": 0,
+      "area": 10,
+      "iscrowd": 0,
+      "bbox": [
+        10,
+        10,
+        100,
+        100
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": 0,
+      "supercategory": "animal",
+      "name": "dog"
+    },
+    {
+      "id": 1,
+      "supercategory": "pill",
+      "name": "allergy"
+    }
+  ],
+  "segment_info": ""
+}
