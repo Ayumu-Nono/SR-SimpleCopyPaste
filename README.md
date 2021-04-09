@@ -12,18 +12,21 @@
 - 線形変換した後のマスクを背景画像に貼り付けられるようにする
 - 線形変換した後にアノテーションのポリゴンの位置が変わるはずなので、それも同じように移動されるようにする
 
-commit
-1. We randomly select two images and apply random scale jittering and random horizontal flipping on each of them. 
-    random scale jittering: 
+Method  
+1. We randomly select two images and apply random scale jittering and random horizontal flipping on each of them.   
+    random scale jittering:  
+        iaa.Affine(
+            scale={"x": (0.8, 1.2), "y": (0.8, 1.2)},
+            translate_px={"x": (-500, 500), "y": (-200, 200)})  
+    random horizontal flipping:  
+        iaa.Fliplr(0.5)  
     
-    iaa.Affine(
-        scale={"x": (0.8, 1.2), "y": (0.8, 1.2)},
-        translate_px={"x": (-500, 500), "y": (-200, 200)})
-    random horizontal flipping:
-    iaa.Fliplr(0.5)
-    
-2. Then we select a random subset of objects from one of the images and paste them onto the other image.
+    bbox: https://imgaug.readthedocs.io/en/latest/source/examples_bounding_boxes.html#a-simple-example  
+    segmaps: https://imgaug.readthedocs.io/en/latest/source/examples_segmentation_maps.html#a-simple-example  
 
+01_jitter_bbox.py : bbs_before.jpg -> bbs_after.jpg  
+01_jitter_segmap.py : segmap_before.jpg -> segmap_after.jpg  
 
+2. Then we select a random subset of objects from one of the images and paste them onto the other image.  
 
 3. Lastly, we adjust the ground-truth annotations accordingly: we remove fully occluded objects and update the masks and bounding boxes of partially occluded objects.
