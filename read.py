@@ -14,6 +14,8 @@ im = im.resize((width, height))
 im_bk = im_bk.resize((width, height))
 im_bk.save("img/background2.jpg")
 
+print(im.size)
+
 mask = Image.new("L", im.size, 0)
 draw = ImageDraw.Draw(mask)
 # # polygons: List[Tuple[int, int]] = [(100, 100), (150, 40), (300, 200)]

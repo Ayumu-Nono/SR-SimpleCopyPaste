@@ -29,4 +29,8 @@ Method
 
 2. Then we select a random subset of objects from one of the images and paste them onto the other image.  
 
+02_copy_paste_bbox.py : mask_aug_bbox.jpg & copy_paste_bbox.jpg
+
+
+
 3. Lastly, we adjust the ground-truth annotations accordingly: we remove fully occluded objects and update the masks and bounding boxes of partially occluded objects.
