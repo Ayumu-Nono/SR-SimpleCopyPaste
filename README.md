@@ -31,6 +31,11 @@ Method
 
 02_copy_paste_bbox.py : mask_aug_bbox.jpg & copy_paste_bbox.jpg
 
+3. Lastly, we adjust the ground-truth annotations accordingly: we remove fully occluded objects and update the masks and bounding boxes of partially occluded objects.  
 
+03_adjust_bbox.py  
 
-3. Lastly, we adjust the ground-truth annotations accordingly: we remove fully occluded objects and update the masks and bounding boxes of partially occluded objects.
+## Next step
+- bbox以外の対応(polygonなど、chicken checkのデータセットに合わせる)
+- COCOformatに合わせる
+- いくつかあるobjectsからrandomに選んで貼る
