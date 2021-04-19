@@ -39,3 +39,6 @@ Method
 - bbox以外の対応(polygonなど、chicken checkのデータセットに合わせる)
 - COCOformatに合わせる
 - いくつかあるobjectsからrandomに選んで貼る
+
+- 関数を作る
+input 画像2枚 -> output 画像1枚

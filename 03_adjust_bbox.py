@@ -22,7 +22,6 @@ bbs = BoundingBoxesOnImage([
 ], shape=image_np.shape)
 
 # Define our augmentation pipeline
-# Large Scale Jittering
 seq = iaa.Sequential([
     iaa.Fliplr(0.5),
     iaa.Affine(
